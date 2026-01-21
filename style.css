@@ -1,45 +1,38 @@
-/* Общие настройки */
-body, html {
+body {
     margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #1a001a, #330033);
+    background: linear-gradient(180deg, #0b0015, #2b0033);
     color: white;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
-.shop-container {
-    position: relative;
-    z-index: 10;
+.title {
     text-align: center;
-    padding: 50px;
+    font-size: 42px;
+    color: #ff9dff;
+    margin-top: 30px;
 }
 
-h1 {
-    font-size: 50px;
-    color: #ff99ff;
-    margin-bottom: 10px;
-}
-
-p {
-    font-size: 20px;
-    margin-bottom: 40px;
+.subtitle {
+    text-align: center;
+    opacity: 0.8;
+    margin-bottom: 20px;
 }
 
 .products {
     display: flex;
-    justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
+    padding: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
 }
 
 .product {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    width: 220px;
+    min-width: 220px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
     transition: transform 0.3s;
 }
 
@@ -49,30 +42,51 @@ p {
 
 .product img {
     width: 100%;
-    height: 150px;
+    height: 140px;
     object-fit: cover;
     border-radius: 10px;
-    margin-bottom: 10px;
+}
+
+.product h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.price {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #ff9dff;
+    font-weight: bold;
 }
 
 button {
-    padding: 10px 15px;
-    font-size: 14px;
-    cursor: pointer;
-    background-color: #9a00ff;
+    background: #9a00ff;
     color: white;
     border: none;
-    border-radius: 5px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 button:hover {
-    background-color: #d400ff;
+    background: #d400ff;
 }
 
-/* Снег поверх всего */
-canvas#snow {
+/* 📱 телефон */
+@media (max-width: 600px) {
+    .product {
+        min-width: 180px;
+    }
+}
+
+/* ❄️ снег */
+#snow {
     position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
+    inset: 0;
+    pointer-events: none;
 }
