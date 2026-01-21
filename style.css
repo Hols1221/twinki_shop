@@ -1,0 +1,78 @@
+/* Общие настройки */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #1a001a, #330033);
+    color: white;
+    overflow: hidden;
+}
+
+.shop-container {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 50px;
+}
+
+h1 {
+    font-size: 50px;
+    color: #ff99ff;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 220px;
+    transition: transform 0.3s;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #9a00ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #d400ff;
+}
+
+/* Снег поверх всего */
+canvas#snow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
