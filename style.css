@@ -190,3 +190,18 @@ body {
     color: #6dff9f;
     text-shadow: 0 0 10px #00ff88;
 }
+.online-counter {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 18px;
+    color: #ff9dff;
+    font-weight: bold;
+}
+.online-counter {
+    text-align: center; /* по центру */
+    font-size: 20px;    /* размер текста */
+    color: #ff9dff;     /* неоновый фиолетовый */
+    font-weight: bold;
+    margin: 10px 0;     /* отступ сверху и снизу */
+    text-shadow: 0 0 5px #ff9dff, 0 0 10px #9a00ff; /* неон */
+}
