@@ -2,81 +2,33 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>twinki_shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Стили -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1 class="title">twinki_shop</h1>
-    <p class="subtitle">Магазин ресурспаков</p>
-
-    <div class="products">
-
-        <div class="product">
-            <img src="images/pack1.jpg">
-            <h2>Ресурс Пак 1</h2>
-            <p>Нежно‑розовый стиль<br>PVE / PVP</p>
-            <div class="price">10RUB / 10UA</div>
-            <a href="resources/pack1.zip" download>
-                <button>Купить</button>
-            </a>
-        </div>
-
-        <div class="product">
-            <img src="images/pack2.jpg">
-            <h2>Ресурс Пак 2</h2>
-            <p>Классический стиль<br>Для PVP</p>
-            <div class="price">12RUB / 12UA</div>
-            <a href="resources/pack2.zip" download>
-                <button>Купить</button>
-            </a>
-        </div>
-
-        <div class="product">
-            <img src="images/pack3.jpg">
-            <h2>Ресурс Пак 3</h2>
-            <p>Минимализм<br>FPS boost</p>
-            <div class="price">8RUB / 8UA</div>
-            <a href="resources/pack3.zip" download>
-                <button>Купить</button>
-            </a>
-        </div>
-
-        <div class="product">
-            <img src="images/pack4.jpg">
-            <h2>Ресурс Пак 4</h2>
-            <p>Темный стиль<br>PVP</p>
-            <div class="price">15RUB / 15UA</div>
-            <a href="resources/pack4.zip" download>
-                <button>Купить</button>
-            </a>
-        </div>
-
-        <div class="product">
-            <img src="images/pack5.jpg">
-            <h2>Ресурс Пак 5</h2>
-            <p>Яркий стиль<br>PVE</p>
-            <div class="price">10RUB / 10UA</div>
-            <a href="resources/pack5.zip" download>
-                <button>Купить</button>
-            </a>
-        </div>
-
-        <div class="product">
-            <img src="images/pack6.jpg">
-            <h2>Ресурс Пак 6</h2>
-            <p>Пастельный стиль<br>PVE / PVP</p>
-            <div class="price">12RUB / 12UA</div>
-            <a href="resources/pack6.zip" download>
-                <button>Купить</button>
-            </a>
-        </div>
-
-    </div>
-
+    <!-- ❄️ Снег -->
     <canvas id="snow"></canvas>
-    <script src="script.js"></script>
 
+    <!-- 🔝 Верхняя панель -->
+    <header class="header">
+        <div class="logo">twinki_shop</div>
+        <a href="shop.html" class="shop-btn">SHOP</a>
+    </header>
+
+    <!-- 🌌 Главный блок -->
+    <main class="hero">
+        <h1 class="hero-title">twinki_shop</h1>
+        <p class="hero-text">
+            Магазин ресурс паков, модов, плагинов для серверов,<br>
+            а также сборок и множества другого.
+        </p>
+    </main>
+
+    <!-- Скрипт снега -->
+    <script src="script.js"></script>
 </body>
 </html>

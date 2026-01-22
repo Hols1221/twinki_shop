@@ -1,42 +1,42 @@
 const canvas = document.getElementById("snow");
 const ctx = canvas.getContext("2d");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+resize();
+window.addEventListener("resize", resize);
 
-let snowflakes = [];
+const snowflakes = [];
 
-for (let i = 0; i < 150; i++) {
+for (let i = 0; i < 180; i++) {
     snowflakes.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         r: Math.random() * 3 + 1,
-        s: Math.random() * 1 + 0.5
+        s: Math.random() * 1.5 + 0.5
     });
 }
 
-function snow() {
-    ctx.clearRect(0,0,canvas.width,canvas.height);
+function drawSnow() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = "white";
-    ctx.beginPath();
 
-    snowflakes.forEach(f => {
+    ctx.beginPath();
+    for (let f of snowflakes) {
         ctx.moveTo(f.x, f.y);
         ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
         f.y += f.s;
+
         if (f.y > canvas.height) {
             f.y = -5;
             f.x = Math.random() * canvas.width;
         }
-    });
-
+    }
     ctx.fill();
-    requestAnimationFrame(snow);
+
+    requestAnimationFrame(drawSnow);
 }
 
-snow();
-
-window.addEventListener("resize", () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-});
+drawSnow();
